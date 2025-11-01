@@ -178,9 +178,9 @@ img {
     word-spacing: 0.2px;
 }
 @media screen and (max-width: 768px) {
-    /* body {
-        gap: 10px 0px;
-    } */
+    body {
+        align-items: center;
+    }
     .container {
         grid-template-columns: 1fr;
         grid-template-areas: 
