@@ -5,7 +5,25 @@
     box-sizing: border-box;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem 0;
+    height: 100vh;
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed",  serif;
+    background-color: hsl(0, 0%, 81%);
+}
+.attribution a {
+    margin-bottom: 50px;
+   
+
+}
+/* grid container */
+.container {
+    flex-grow: 1;
     display: grid;
+    grid-template-columns: repeat(4,1fr);
     grid-template-areas: 
     "daniel daniel jonathan kira"
     "jeanette patrick patrick kira"
@@ -13,7 +31,7 @@ body {
     font-size: 13px;
     font-family: "Barlow Semi Condensed",  serif;
     padding: 2rem;
-    background-color: hsl(0, 0%, 81%);
+    gap: 1.5rem;
 }
 img {
     border-radius: 50%;
@@ -25,6 +43,7 @@ img {
 .info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
 }
 .daniel {
@@ -32,33 +51,72 @@ img {
     background-color: hsl(263, 55%, 52%);
     padding: 2rem;
     border-radius: 10px;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
     position: relative;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 7rem auto;
+    background-position: right 4rem top 1rem;
 }
 
-.daniel img[src*="bg-pattern-quotation.svg"] {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    opacity: 0.5;
+.daniel .info p:nth-of-type(1) {
+    color: hsl(214, 17%, 81%);
+    font-weight: 500;
+    margin: 0;
 }
-
-
+.daniel .info p:nth-of-type(2) {
+    color: hsl(0, 0%, 81%);
+}
+.daniel > p:nth-child(2) {
+    color: hsl(214, 17%, 90%);
+    font-weight: 500;
+    font-size:  1.3rem;
+    /* line-height: 1.3; */
+    margin: 20px 0px;
+    /* max-width: 52ch; */
+}
+.daniel blockquote {
+    color: hsl(0, 0%, 81%);
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 72ch;
+}
 .jonathan {
     grid-area: jonathan;
-    background-color: hsl(217, 19%, 35%);
+    background-color: hsl(219, 19%, 35%);
     padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
+    border-radius: 10px; 
 }
 
+.jonathan .info p:nth-of-type(1) {
+    color: hsl(214, 17%, 81%);
+    font-weight: 500;
+}
+.jonathan .info p:nth-of-type(2) {
+    color: hsl(0, 0%, 81%);
+}
+.jonathan > p:nth-child(2) {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.jonathan blockquote {
+    color: hsl(0, 0%, 81%);
+    font-weight: 500;
+    line-height: 1.55;
+    max-width: 38ch;
+    letter-spacing: 0.4px;
+}
 .jeanette {
     grid-area: jeanette;
     padding: 2rem;
-    margin-right: 1.5rem;
     border-radius: 10px;
     background-color: hsl(214, 17%, 92%);
+}
+
+.jeanette .info p:nth-of-type(2) {
+    color: hsl(224, 10%, 45%);
+    font-weight: 500;
 }
 
 .patrick {
@@ -73,5 +131,52 @@ img {
     padding: 2rem;
     border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
-    margin-left: 1.5rem;
+   
+}
+
+.before {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+body > div.container > div.kira > p:nth-child(3) {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    
+}
+body > div.container > div.jonathan > p:nth-child(3) {
+    margin-top: 10px;
+    line-height: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+    /* html{
+        height: 100vh;
+    } */
+    .daniel {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .jonathan {
+        margin-bottom: 0px;
+    }
+    .jeanette {
+        margin-right: 0px;
+    }
+    .kira {
+        margin-left: 0px;
+    }
+    body {
+        gap: 10px 0px;
+        /* height: 100vh; */
+       
+    }
+    .container {
+         grid-template-areas: 
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira"
+    ;
+    gap: 20px;
+    }
 }
