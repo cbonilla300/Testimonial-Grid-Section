@@ -118,7 +118,17 @@ img {
     color: hsl(224, 10%, 45%);
     font-weight: 500;
 }
-
+.jeanette > p:nth-of-type(1) {
+    color: hsl(219, 29%, 14%);
+    font-weight: 500;
+    font-size: 1.3rem;
+    letter-spacing: 0.3px;
+    margin: 20px 0
+}
+.jeanette blockquote {
+    color: hsl(224, 10%, 45%);
+    font-weight: 500;
+}
 .patrick {
     grid-area: patrick;
     padding: 2rem;
