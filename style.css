@@ -14,10 +14,8 @@ body {
     font-family: "Barlow Semi Condensed",  serif;
     background-color: hsl(0, 0%, 81%);
 }
-.attribution a {
-    margin-bottom: 50px;
-   
-
+.attribution  {
+    padding: 2rem;
 }
 /* grid container */
 .container {
@@ -213,5 +211,8 @@ img {
     .kira blockquote {
         word-spacing: 0px;
         letter-spacing: 0.1px;
+    }
+    .attribution  {
+    padding: 2rem;
     }
 }
